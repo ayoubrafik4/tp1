@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire Contact - exo06 (HTML Pur)</title>
+</head>
+<body>
+
+    <h2>Formulaire Contact</h2>
+
+    <form action="/traitement-contact" method="post">
+            
+        <p>
+            <label for="nom">Nom (obligatoire) :</label><br>
+            <input type="text" id="nom" name="nom" required size="40">
+        </p>
+            
+        <p>
+            <label for="email">Email (obligatoire) :</label><br>
+            <input type="email" id="email" name="email" required size="40">
+        </p>
+            
+        <p>
+            <label for="sujet">Sujet (texte) :</label><br>
+            <input type="text" id="sujet" name="sujet" maxlength="60" size="40">
+        </p>
+            
+        <p>
+            <label for="message">Message (textarea, min 50 caractères conseillé) :</label><br>
+            <textarea id="message" name="message" rows="5" cols="40" minlength="50" required></textarea>
+        </p>
+            
+        <p>
+            <button type="submit">Envoyer</button>
+        </p>
+
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'inscription avancé  (HTML Pur)</title>
+</head>
+<body>
+
+    <h2 align="center">Créer un compte</h2>
+
+    <form action="/creation-compte" method="post">
+        
+        <fieldset>
+            <legend>Identité</legend>
+            
+            <p>
+                <label for="nom">Nom :</label><br>
+                <input type="text" id="nom" name="nom" required size="40">
+            </p>
+
+            <p>
+                <label for="prenom">Prénom :</label><br>
+                <input type="text" id="prenom" name="prenom" required size="40">
+            </p>
+
+            <p>
+                <label for="date_naissance">Date de naissance (>= 1900) :</label><br>
+                <input type="date" id="date_naissance" name="date_naissance" required min="1900-01-01" max="2025-10-22">
+            </p>
+
+        </fieldset>
+        
+        <fieldset>
+            <legend>Contact</legend>
+
+            <p>
+                <label for="telephone">Téléphone (+212) :</label><br>
+                <input 
+                    type="tel" 
+                    id="telephone" 
+                    name="telephone" 
+                    required 
+                    pattern="^0[5-7]\d{8}$"
+                    title="Doit commencer par 05, 06 ou 07 suivi de 8 chiffres (exemple : 0612345678)"
+                    placeholder="exemple : 0612345678"
+                    size="40"
+                >
+            </p>
+
+            <p>
+                <label for="site_perso">(URL) :</label><br>
+                <input type="url" id="site_perso" name="site_perso" placeholder="https://www.monsite.com" size="40">
+            </p>
+            
+        </fieldset>
+        
+        <fieldset>
+            <legend>Sécurité</legend>
+
+            <p>
+                <label for="mot_de_passe">Mot de passe (minimum 8 caractères) :</label><br>
+                <input type="password" id="mot_de_passe" name="mot_de_passe" required minlength="8" size="40">
+            </p>
+
+            <p>
+                <label for="confirmation_mdp">Confirmez le mot de passe</label><br>
+                <input type="password" id="confirmation_mdp" name="confirmation_mdp" required minlength="8" size="40">
+                </p>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Préférences</legend>
+
+            <p>
+                <input type="checkbox" id="newsletter" name="newsletter" value="oui">
+                <label for="newsletter">Abonez-vous à la newsletter</label>
+            </p>
+
+            <p>
+                <label>votre Rôle</label><br>
+                <input type="radio" id="role_etudiant" name="role" value="etudiant" required>
+                <label for="role_etudiant">Étudiant</label>
+                
+                <input type="radio" id="role_pro" name="role" value="professionnel">
+                <label for="role_pro">Pro</label>
+            </p>
+
+        </fieldset>
+
+        <p align="center">
+            <button type="submit">Créer mon compte</button>
+        </p>
+
+    </form>
+
+</body>
+</html>
